@@ -1,13 +1,36 @@
 
-#milk_consumption_map {
-	top:100px;
-	bottom: 100px; 
-	left: 100px;
-	right: 100px;
+html,
+body {
+    background-color: #F3FAF9;
 }
 
+.pure-u-1-2 img {
+    width: 30vw;
+    height: 30vw;
+}
 
-#Title {
-	text-align: center;
-	font-family: 'Lucida Sans';
+.pure-u-1-2 {
+    margin-top: 30px;
+    height: 30vw;
+}
+
+#text_div {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: #527298;
+    font-size: 40px;
+}
+
+p {
+    color: #527298;
+    font-size: 16px;
+}
+
+#bar_chart {
+    width: 90%;
+    height: 90%
 }
