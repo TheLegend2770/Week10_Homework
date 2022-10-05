@@ -1,0 +1,60 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Cheese Awards Won by Countries",
+    "data": {"url": "https://raw.githubusercontent.com/TheLegend2770/Week10_Homework/main/data/world_cheese_awards_2021.csv"},    
+    "params": [
+      {
+      "name": "medal_selection",
+      "bind": {
+      "input": "select",
+      "options": [
+      null,
+      "BRONZE",
+      "SILVER",
+      "GOLD",
+      "SUPER GOLD"
+      ],
+      "labels":[
+      "Show All",
+      "BRONZE",
+      "SILVER",
+      "GOLD",
+      "SUPER GOLD"
+      ],
+      "name": "Medal Selection: "
+          }
+        }
+      ],
+      "transform": [{"filter": "medal_selection == null || datum.rating == medal_selection"
+    }
+  ],
+    "mark": "bar",
+    "encoding": {
+        "x":{
+          "aggregate": "count", 
+          "field": "rating",  
+          "title": "Number of Medals"
+        },
+        "y":{
+          "field": "country", 
+          "title": "Country"
+        },
+    "color":{"field": "rating",
+    "scale": {
+      "domain": ["BRONZE",
+      "SILVER",
+      "GOLD",
+      "SUPER GOLD"],
+      "range":["#70440f", "#8f847c", "#f1f511", "#fab905"]
+      
+    }, 
+    "legend":{"title": "Medal Type"}
+    },
+      "tooltip": [
+      {"field": "country", "type": "nominal", "title": "Country"},
+      {"field": "rating", "type": "nominal", "title": "Medal Type"},
+      {"field": "rating", "aggregate":"count", "type": "quantitative", "title": "Number of Medals"}
+        ]
+      }
+    }
+       
