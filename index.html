@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css" />
 
     <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
@@ -48,6 +49,15 @@
                 <h3>Cheese Awards Around the World</h3>
                 <div id="bar_chart">
                 </div>  
+        </div>
+
+        <div class="pure-u-1">
+            <div id="milk_consumption_map"></div>
+                <script type="text/javascript">
+                var spec2 = "json/milk_consumption_map_final.vg.json";
+                vegaEmbed('#milk_consumption_map', spec2).then(function(result) {
+                }).catch(console.error);
+                </script>
         </div>
     </div>
 </body>
