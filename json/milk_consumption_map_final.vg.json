@@ -1,3 +1,5 @@
+
+
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": "Milk Consumption Worldwide in 2022",
@@ -5,13 +7,20 @@
     "height": 450,
     "projection": {"type": "equalEarth"},
     "data": {
-        "url": "https://raw.githubusercontent.com/TheLegend2770/FIT3179_Map_HomeworkTask/main/json/ne_110m_admin_0_countries.topojson",
+        "url": "https://raw.githubusercontent.com/TheLegend2770/Week10_Homework/main/json/ne_110m.topojson",
         "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
     },
     "layer":[
-        {
+          {
             "data": {
-              "url": "https://raw.githubusercontent.com/TheLegend2770/FIT3179_Map_HomeworkTask/main/json/ne_110m_admin_0_countries.topojson",
+              "url": "https://raw.githubusercontent.com/TheLegend2770/Week10_Homework/main/json/oceans.topo.json",
+              "format": {"type": "topojson", "feature": "oceans"}
+  },
+    "mark": {"type": "geoshape", "fill":"#A7C2CD"}
+          },
+          {
+            "data": {
+              "url": "https://raw.githubusercontent.com/TheLegend2770/Week10_Homework/main/json/ne_110m.topojson",
               "format": {"type": "topojson", "feature": "ne_110m_graticules_30"}
             },
             "mark": {"type": "geoshape", "fill": null, "stroke": "lightgray"}
@@ -58,8 +67,6 @@
           ]
         }
       }
-    ],
-  "config": {
-    "background":"#A7C2CD"
+    ]
   }
-  }
+  
