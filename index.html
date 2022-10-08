@@ -13,38 +13,54 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
 
-    <script src="js/vega_lite_vis.js"></script>
-
-
 
 </head>
 
+
+    
+    
+
 <body>
+    <h1>Best Cheese Producing Countries Around the World</h1>
     <div class="pure-g">
-        <div class="pure-u-1">
-            <img src="images/banner.png" />
-        </div>
-        <div class="pure-u-1-3">
-            <div id='text_div'>
-                <h1>The Index</h1>
-                <p>The annual European Backpacker Index, compiled by priceoftravel.com, is designed to help money-savy travellers find the cheapest European cities and plan an accurate budget for when they visit.
-                    <br> <br> Prices for most things like hostels, transportation and attractions are fixed and certain. However, prices for a 'budget lunch' or a pint of beer can vary depending on where you go. The index takes all of these factors into
-                    account to calculate the approximate price of a day in each city, including an overnight stay at a backpacker hostel.
-                    <br> <br> Here we review the top five cheapest European cities, as featured on the 2018 Index. Review the complete list of 59 cities at https://www.priceoftravel.com/1979/european- backpacker-index/.
+        <div class="pure-u-12-24">
+        <div id="text_div">
+            <h3>History of Cheese</h3>
+                <p>
+                    Cheese making can be traced back almost 10,000 years ago, with 
+                    evidence of countries developing cheese in their own ways.  All countries
+                    have cheeses unique to their regions.  The famous Green County Cheese factory
+                    is known to produce 200 different types of cheese. 
+                    (National Historic Cheese Making Center, https://nationalhistoriccheesemakingcenter.org/history-of-cheese/)
+                    <br> <br>Cheese is a staple food used around the world.  It's a 
+                    food that even has competitions based on it, in which countries compete 
+                    to decide who produces the best cheese.  Are there some countires that 
+                    are better at making cheeses than others, and if so what are the 
+                    possible reasons for this cheese making predisposition.
+                    <br> <br>The table highlights that majority of the countries that produce high
+                    quality cheeses are mostly European.  This correlates with the map, that 
+                    shows a high level of milk consumption within Europe.  This suggests
+                    that the level of a countries milk consumption correlates to the quality 
+                    of the cheese they produce.
                 </p>
             </div>
         </div>
-        <div class="pure-u-1-3">
-            <h1>The daily cost covers</h1>
-            <img src="images/center.png" />
-        </div>
-        <div class="pure-u-1-3">
-            <h1>The cheapest cities</h1>
-            <div id="bar_chart">
 
-            </div>
+        <div class="pure-u-12-24">
+                <h3>Cheese Awards Around the World</h3>
+                <div id="bar_chart">
+                    <script src="json/cheese_award_table.js"></script>
+                </div>  
+        </div> 
+
+        <div class="pure-u-1">
+            <div id="milk_consumption_map"></div>
+                <script type="text/javascript">
+                var spec2 = "json/milk_consumption_map_final.vg.json";
+                vegaEmbed('#milk_consumption_map', spec2).then(function(result) {
+                }).catch(console.error);
+                </script>
         </div>
     </div>
 </body>
 
-</html>
