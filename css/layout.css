@@ -5,17 +5,19 @@ body {
 }
 
 h1 {
+    font-family: 'Lucida Sans';
     text-align: center;
     color: #d2b200ce;
     font-size: 40px;
-    font-family: 'Lucida Sans';
+    
 }
 
 h3 {
+    font-family: 'Lucida Sans';
     text-align: center;
     color: #d2b200ce;
     font-size: 20px;
-    font-family: 'Lucida Sans';
+   
 }
 
 #milk_consumption_map {
@@ -27,8 +29,8 @@ h3 {
 
 p {
     color: #000000ce;
-    font-size: 16px;
     font-family: 'Lucida Sans';
+    font-size: 16px;    
 }
 
 .pure-u-1-3 {
